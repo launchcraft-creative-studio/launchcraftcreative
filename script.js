@@ -44,48 +44,26 @@ const SERVICES_DETAIL = {
 
 const PROJECTS = [
   {
-    id: "fieldstone", tag: "FS", accent: "#8B5CF6",
-    title: "Fieldstone Outfitters", tags: ["Web Design", "SEO"],
-    summary: "Rebuilding an outdoor retailer's site for speed and search visibility.",
-    client: "Fieldstone Outfitters", industry: "Outdoor Retail", timeline: "10 weeks", services: "Web Design & Development, SEO",
-    challenge: "Fieldstone's existing site took over six seconds to load on mobile and ranked on page three for its core product categories, leaving organic traffic flat for two years.",
-    solution: "We rebuilt the storefront on a headless architecture, restructured the site's information hierarchy around search intent, and rewrote category content around a keyword map built from actual customer search behavior.",
-    process: "Discovery interviews with the merchandising team, a full technical SEO audit, wireframes tested with five target customers, then a phased development rollout to avoid disrupting existing rankings.",
-    tech: "Next.js, Shopify Headless, Sanity CMS, Cloudflare",
-    results: [{num:"1.8s", label:"Median load time"},{num:"+68%", label:"Organic traffic"},{num:"4.2x", label:"Return on ad spend"}]
+    id: "newpark", tag: "NP", accent: "#F2453B", link: "https://webioio.github.io/newpark/",
+    title: "Hotel New Park", tags: ["Web Design", "Hospitality"],
+    summary: "A full website rebuild for a heritage hotel on the Boulevard, Dal Lake, Srinagar.",
+    client: "Hotel New Park", industry: "Hospitality, Srinagar", timeline: "6 weeks", services: "Web Design & Development, Branding",
+    challenge: "Hotel New Park has welcomed guests on the Boulevard since 1916, but the property had no real online presence to match its history or its location on Dal Lake — most bookings came through word of mouth or third-party travel sites alone.",
+    solution: "We built a clean, story-led website around the hotel's heritage and lakefront setting — rooms, facilities, tariff, and a gallery — with clear ways to call or email for reservations directly.",
+    process: "On-site visit and photography review, content built around the hotel's history and location, room and facilities pages, then a gallery and direct-contact reservation flow.",
+    tech: "HTML, CSS, JavaScript",
+    results: [{num:"88", label:"Rooms showcased"},{num:"1916", label:"Heritage since"},{num:"Live", label:"webioio.github.io/newpark"}]
   },
   {
-    id: "moreno", tag: "MB", accent: "#F0A857",
-    title: "Moreno & Bell Law", tags: ["Branding", "UI/UX"],
-    summary: "A full identity and website rebuild for a boutique law practice.",
-    client: "Moreno & Bell", industry: "Legal Services", timeline: "8 weeks", services: "Branding & Logo Design, UI/UX Design, Web Design",
-    challenge: "Moreno & Bell had strong word-of-mouth but a dated identity that undersold their expertise and made them hard to find or trust online.",
-    solution: "We developed a new identity rooted in the firm's actual point of difference — direct partner access — then designed a website structured around the questions prospective clients actually ask before hiring a lawyer.",
-    process: "Stakeholder interviews with both partners, a competitive identity audit, three concept directions narrowed to one, then a content-first website build.",
-    tech: "Webflow, Figma, Adobe Illustrator",
-    results: [{num:"+140%", label:"Consultation requests"},{num:"3.1x", label:"Time on site"},{num:"92%", label:"Client satisfaction"}]
-  },
-  {
-    id: "hollowpeak", tag: "HP", accent: "#5B6EF5",
-    title: "Hollow Peak Roasters", tags: ["Social Media", "Digital Marketing"],
-    summary: "Growing a coffee roaster's subscription business through content and paid social.",
-    client: "Hollow Peak Roasters", industry: "Food & Beverage", timeline: "Ongoing, 6+ months", services: "Social Media Management, Digital Marketing, Email",
-    challenge: "Hollow Peak had a loyal in-store following but almost no online subscription revenue, and their social presence wasn't converting followers into customers.",
-    solution: "We built a content system around the roasting process itself, launched a always-on paid social funnel toward a subscription offer, and layered in an email flow for cart recovery and reorder reminders.",
-    process: "Audience research, a 90-day content calendar, weekly creative production, and bi-weekly performance reviews to reallocate spend toward what converted.",
-    tech: "Meta Ads, Klaviyo, Later, Shopify",
-    results: [{num:"2.4x", label:"Subscription revenue"},{num:"-31%", label:"Cost per acquisition"},{num:"18K", label:"New engaged followers"}]
-  },
-  {
-    id: "verdant", tag: "VR", accent: "#4ADE80",
-    title: "Verdant Health", tags: ["Web Design", "UI/UX", "SEO"],
-    summary: "A patient portal and marketing site rebuild for a multi-location clinic group.",
-    client: "Verdant Health", industry: "Healthcare", timeline: "14 weeks", services: "Web Design & Development, UI/UX Design, SEO",
-    challenge: "Verdant's booking flow required four separate steps across two systems, and their marketing site wasn't ranking for any of their eleven clinic locations.",
-    solution: "We consolidated booking into a single embedded flow, built location-specific landing pages optimized for local search, and restructured the whole site around patient intent rather than internal department structure.",
-    process: "Patient journey mapping, a booking-flow audit with the front-desk staff, local SEO research per location, then iterative usability testing on the new flow.",
-    tech: "React, Node.js, Local SEO tooling, HIPAA-compliant hosting",
-    results: [{num:"-52%", label:"Booking abandonment"},{num:"11/11", label:"Locations ranking page 1"},{num:"+2,100", label:"Monthly organic visits"}]
+    id: "dumpukht", tag: "DP", accent: "#0B4C9C", link: "https://webioio.github.io/dumpukht/",
+    title: "Dumpukht", tags: ["Web Design", "Branding"],
+    summary: "A menu-led website for a Srinagar home kitchen serving haleem, harisa and biryani in bulk.",
+    client: "Dumpukht", industry: "Food & Catering, Srinagar", timeline: "4 weeks", services: "Web Design & Development, Branding",
+    challenge: "Dumpukht cooks traditional Kashmiri dishes — haleem, harisa, biryani, kebabs — to order in bulk for weddings and gatherings, but had no site to show the menu or take enquiries beyond word of mouth and WhatsApp.",
+    solution: "We designed a warm, menu-first site organised into clear chapters — Dumpukht Special, Rice, Mutton, Chicken, Kebab, Dessert — with a bulk-ordering section and direct call/WhatsApp contact.",
+    process: "Menu structuring into categories, photography-ready layout, a dedicated full-menu page, and a bulk-ordering guide for weddings, parties and gatherings.",
+    tech: "HTML, CSS, JavaScript",
+    results: [{num:"6", label:"Menu chapters"},{num:"24hr", label:"Order lead time"},{num:"Live", label:"webioio.github.io/dumpukht"}]
   }
 ];
 
@@ -101,10 +79,8 @@ const PROCESS = [
 ];
 
 const TESTIMONIALS = [
-  {i:"JR", q:"LaunchCraft is the first studio we've used that explains why a design decision works, not just that it looks good. Our conversion rate doubled.", n:"Jordan Reyes", r:"Head of Growth, Fieldstone Outfitters"},
-  {i:"AM", q:"They rebuilt our entire brand and website in under two months without a single missed deadline. Consultation requests are up 140%.", n:"Alicia Moreno", r:"Partner, Moreno & Bell Law"},
-  {i:"DK", q:"Our social presence finally converts. LaunchCraft treats content like a system, not a scramble every week.", n:"Devon Kade", r:"Owner, Hollow Peak Roasters"},
-  {i:"SP", q:"Patient booking abandonment dropped by half within a month of launch. The team understood healthcare UX in a way most agencies don't.", n:"Sarah Pham", r:"Director of Marketing, Verdant Health"}
+  {i:"NP", q:"LaunchCraft gave our hotel a website that finally matches our history on the Boulevard. Direct enquiries are up since launch.", n:"Nasir Parvaiz", r:"Manager, Hotel New Park"},
+  {i:"SD", q:"They understood our menu and our kitchen, not just design trends. The site reads exactly the way we wanted our story to sound.", n:"Sameena Dar", r:"Owner, Dumpukht"}
 ];
 
 const FAQS = [
@@ -212,7 +188,7 @@ function drawGrid(){
   sizeCanvas();
   ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
   ctx.clearRect(0,0,canvas.offsetWidth, canvas.offsetHeight);
-  ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+  ctx.strokeStyle = 'rgba(20,18,30,0.055)';
   ctx.lineWidth = 1;
   const gap = 56;
   for (let x=0; x<canvas.offsetWidth; x+=gap){
@@ -263,8 +239,8 @@ $$('.service-card').forEach(card => {
 const portfolioGrid = $('#portfolioGrid');
 portfolioGrid.innerHTML = PROJECTS.map(p => `
   <div class="project-card reveal" data-reveal data-project="${p.id}">
-    <div class="project-media" style="background:radial-gradient(circle at 30% 20%, ${p.accent}22, #0D0D14 70%);">
-      <span class="glow-tag" style="color:${p.accent};">${p.tag}</span>
+    <div class="project-media" style="background:radial-gradient(circle at 30% 20%, ${p.accent}22, #F7F3EC 78%);">
+      <span class="glow-tag" style="color:${p.accent};opacity:0.16;">${p.tag}</span>
       <span class="project-arrow">↗</span>
     </div>
     <div class="project-info">
@@ -281,7 +257,7 @@ portfolioGrid.addEventListener('click', e => {
   if (!card) return;
   const p = PROJECTS.find(x => x.id === card.dataset.project);
   openModal(`
-    <div class="case-hero" style="background:radial-gradient(circle at 30% 20%, ${p.accent}33, #0D0D14 70%); color:${p.accent};">${p.tag}</div>
+    <div class="case-hero" style="background:radial-gradient(circle at 30% 20%, ${p.accent}33, #F7F3EC 78%); color:${p.accent};">${p.tag}</div>
     <p class="eyebrow">Case Study</p>
     <h2>${p.title}</h2>
     <div class="case-meta">
@@ -298,6 +274,7 @@ portfolioGrid.addEventListener('click', e => {
       <h4>Results</h4>
       <div class="case-results">${p.results.map(r => `<div><div class="num">${r.num}</div><div class="label">${r.label}</div></div>`).join('')}</div>
     </div>
+    ${p.link ? `<a href="${p.link}" target="_blank" rel="noopener" class="btn btn-glow magnetic" style="margin-top:24px;">Visit Live Site ↗</a>` : ''}
   `);
 });
 
