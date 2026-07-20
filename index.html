@@ -1,1 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LaunchCraft Creative Studio — Websites, Branding &amp; Digital Marketing</title>
+<meta name="description" content="LaunchCraft Creative Studio helps businesses launch, grow, and scale through thoughtful design and strategic digital marketing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark"><img src="logo.png" alt="LaunchCraft Creative Studio logo"></span>
+      <span class="brand-name">LaunchCraft</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="#about" data-nav>About</a>
+      <a href="#services" data-nav>Services</a>
+      <a href="#portfolio" data-nav>Portfolio</a>
+      <a href="#process" data-nav>Process</a>
+      <a href="#testimonials" data-nav>Testimonials</a>
+      <a href="#faq" data-nav>FAQ</a>
+    </nav>
+    <a href="#contact" class="btn btn-glow magnetic" data-nav>Start Your Project</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about" data-nav>About</a>
+    <a href="#services" data-nav>Services</a>
+    <a href="#portfolio" data-nav>Portfolio</a>
+    <a href="#process" data-nav>Process</a>
+    <a href="#testimonials" data-nav>Testimonials</a>
+    <a href="#faq" data-nav>FAQ</a>
+    <a href="#contact" data-nav class="mobile-cta">Start Your Project</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <canvas id="gridCanvas"></canvas>
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+      <div class="blob blob-c"></div>
+      <div class="noise"></div>
+    </div>
+    <div class="wrap hero-content">
+      <div class="hero-eyebrow reveal" data-reveal>
+        <span class="dot-pulse"></span> Design &amp; Growth Studio · Est. 2019
+      </div>
+      <h1 class="hero-title">
+        <span class="reveal-line"><span class="reveal-inner">We craft brands</span></span>
+        <span class="reveal-line"><span class="reveal-inner">that <em>launch</em>, grow,</span></span>
+        <span class="reveal-line"><span class="reveal-inner">and <em>scale</em>.</span></span>
+      </h1>
+      <p class="hero-sub reveal" data-reveal>
+        LaunchCraft Creative Studio helps ambitious businesses grow through
+        exceptional websites, memorable branding, and strategic digital marketing —
+        built with craft, not templates.
+      </p>
+      <div class="hero-ctas reveal" data-reveal>
+        <a href="#contact" class="btn btn-glow magnetic">Start Your Project</a>
+        <a href="#portfolio" class="btn btn-outline magnetic">View Our Work</a>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="reveal" data-reveal>
+          <p class="eyebrow">About the studio</p>
+          <h2 class="section-title">Design with intent. Marketing with math.</h2>
+          <p class="body-lg">
+            LaunchCraft was founded on a simple belief: a beautiful website
+            means nothing if it doesn't grow the business behind it. We're a
+            small, senior team of designers, developers, and strategists who
+            treat every project like it's our own — obsessing over pixels
+            and performance in equal measure.
+          </p>
+          <div class="values-grid">
+            <div class="value-card">
+              <h3>Mission</h3>
+              <p>Help businesses launch, grow, and scale through thoughtful design and strategic marketing.</p>
+            </div>
+            <div class="value-card">
+              <h3>Vision</h3>
+              <p>A world where every brand's digital presence is as good as the business behind it.</p>
+            </div>
+            <div class="value-card">
+              <h3>Values</h3>
+              <p>Craft over templates. Data over guesswork. Partnership over transactions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="stat-panel reveal" data-reveal>
+          <div class="stat" data-count="180"><span class="stat-num">0</span><span class="stat-suffix">+</span><p>Projects launched</p></div>
+          <div class="stat" data-count="94"><span class="stat-num">0</span><span class="stat-suffix">%</span><p>Client retention</p></div>
+          <div class="stat" data-count="12"><span class="stat-num">0</span><span class="stat-suffix">M+</span><p>Revenue generated for clients</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="wrap">
+      <div class="section-head reveal" data-reveal>
+        <p class="eyebrow">What we do</p>
+        <h2 class="section-title">Everything a growing brand needs, under one roof</h2>
+      </div>
+      <div class="services-grid">
+
+        <button class="service-card reveal" data-reveal data-service="web">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><circle cx="6.5" cy="6.5" r=".6" fill="currentColor" stroke="none"/><circle cx="9" cy="6.5" r=".6" fill="currentColor" stroke="none"/></svg></span>
+          <h3>Website Design &amp; Development</h3>
+          <p>Fast, elegant websites engineered to convert — not just look good.</p>
+          <span class="learn-more">Learn more <i>→</i></span>
+        </button>
+
+        <button class="service-card reveal" data-reveal data-service="brand">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg></span>
+          <h3>Branding &amp; Logo Design</h3>
+          <p>Identity systems that make your business unmistakable.</p>
+          <span class="learn-more">Learn more <i>→</i></span>
+        </button>
+
+        <button class="service-card reveal" data-reveal data-service="uiux">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+          <h3>UI/UX Design</h3>
+          <p>Interfaces designed around how real people actually behave.</p>
+          <span class="learn-more">Learn more <i>→</i></span>
+        </button>
+
+        <button class="service-card reveal" data-reveal data-service="social">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.2 10.8L15.8 7.2M8.2 13.2l7.6 3.6"/></svg></span>
+          <h3>Social Media Management</h3>
+          <p>Consistent, on-brand presence across every channel that matters.</p>
+          <span class="learn-more">Learn more <i>→</i></span>
+        </button>
+
+        <button class="service-card reveal" data-reveal data-service="graphic">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="8" rx="1.5"/><circle cx="17" cy="7" r="4"/><path d="M4 21l6-9 5 6 3-4 2 3"/></svg></span>
+          <h3>Graphic Design</h3>
+          <p>Print, digital, and campaign assets built on a coherent system.</p>
+          <span class="learn-more">Learn more <i>→</i></span>
+        </button>
+
+        <button class="service-card reveal" data-reveal data-service="seo">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M8 11l2 2 4-4"/></svg></span>
+          <h3>Search Engine Optimization</h3>
+          <p>Technical, content, and authority work aimed at rankings that last.</p>
+          <span class="learn-more">Learn more <i>→</i></span>
+        </button>
+
+        <button class="service-card reveal" data-reveal data-service="marketing">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l18-7-7 18-2.5-7.5L3 11z"/></svg></span>
+          <h3>Digital Marketing</h3>
+          <p>Paid, email, and content strategy tied to real revenue targets.</p>
+          <span class="learn-more">Learn more <i>→</i></span>
+        </button>
+
+        <button class="service-card reveal" data-reveal data-service="maintenance">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 01-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 015.4-5.4l-2.6 2.6-1.8-1.8z"/></svg></span>
+          <h3>Website Maintenance</h3>
+          <p>Ongoing updates, monitoring, and support so nothing breaks quietly.</p>
+          <span class="learn-more">Learn more <i>→</i></span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="section portfolio" id="portfolio">
+    <div class="wrap">
+      <div class="section-head reveal" data-reveal>
+        <p class="eyebrow">Selected work</p>
+        <h2 class="section-title">Case studies, not just screenshots</h2>
+        <p class="body-lg">Click any project for the challenge, the approach, and the results.</p>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process" id="process">
+    <div class="wrap">
+      <div class="section-head reveal" data-reveal>
+        <p class="eyebrow">How we work</p>
+        <h2 class="section-title">Eight stages. One accountable team.</h2>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials" id="testimonials">
+    <div class="wrap">
+      <div class="section-head reveal" data-reveal>
+        <p class="eyebrow">Client words</p>
+        <h2 class="section-title">Don't take our word for it</h2>
+      </div>
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq">
+    <div class="wrap faq-wrap">
+      <div class="section-head reveal" data-reveal>
+        <p class="eyebrow">Questions</p>
+        <h2 class="section-title">Frequently asked</h2>
+      </div>
+      <div class="accordion" id="accordion"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal" data-reveal>
+        <p class="eyebrow">Start a project</p>
+        <h2 class="section-title">Tell us where you want to go</h2>
+        <p class="body-lg">Fill out the form and we'll reply within one business day with next steps.</p>
+
+        <div class="contact-info">
+          <div><span>Email</span><a href="mailto:info@launchcraftcreative.net">info@launchcraftcreative.net</a></div>
+          <div><span>Phone</span><a href="tel:+919419954704">+91 94199 54704</a></div>
+          <div><span>Studio</span><p>Based in Srinagar · Clients across Kashmir &amp; India</p></div>
+        </div>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 014 0V17M11 17v-7"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+          <a href="#" aria-label="Dribbble"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M4 9c4 1.5 12 1.5 16.5.5M3.5 15c5-1 12 .5 15 4M9 3.5c3 4 4 10 3 17"/></svg></a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" data-reveal id="contactForm">
+        <div class="form-row">
+          <label>Name<input type="text" name="name" required placeholder="Jordan Reyes"></label>
+          <label>Company<input type="text" name="company" placeholder="Fieldstone Co."></label>
+        </div>
+        <div class="form-row">
+          <label>Email<input type="email" name="email" required placeholder="you@company.com"></label>
+          <label>Phone<input type="tel" name="phone" placeholder="+91 98765 43210"></label>
+        </div>
+        <label>Service required
+          <select name="service">
+            <option>Website Design &amp; Development</option>
+            <option>Branding &amp; Logo Design</option>
+            <option>UI/UX Design</option>
+            <option>Social Media Management</option>
+            <option>Graphic Design</option>
+            <option>SEO</option>
+            <option>Digital Marketing</option>
+            <option>Website Maintenance</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Budget range
+          <select name="budget">
+            <option>Under ₹1,00,000</option>
+            <option>₹1,00,000 – ₹3,00,000</option>
+            <option>₹3,00,000 – ₹8,00,000</option>
+            <option>₹8,00,000+</option>
+          </select>
+        </label>
+        <label>Project details<textarea name="details" rows="4" placeholder="Tell us about your project, timeline, and goals."></textarea></label>
+        <button type="submit" class="btn btn-glow magnetic" style="width:100%;justify-content:center;">Send Project Brief</button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="brand"><span class="brand-mark"><img src="logo.png" alt="LaunchCraft Creative Studio logo"></span><span class="brand-name">LaunchCraft</span></a>
+      <p>A design and growth studio helping brands launch, grow, and scale.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Web Design</a>
+      <a href="#services">Branding</a>
+      <a href="#services">SEO</a>
+      <a href="#services">Digital Marketing</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <div class="social-row">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 014 0V17M11 17v-7"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 LaunchCraft Creative Studio. All rights reserved.</span>
+    <div><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+  </div>
+</footer>
+
+<!-- PORTFOLIO MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
