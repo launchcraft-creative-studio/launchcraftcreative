@@ -347,7 +347,46 @@ setAccordionHeights();
 // ============ CONTACT FORM ============
 const contactForm = $('#contactForm');
 const formNote = $('#formNote');
-contactForm.addEventListener('submit', e => {
+const CONTACT_EMAIL = 'hello@launchcraftcreative.net';
+const submitBtn = $('button[type="submit"]', contactForm);
+
+contactForm.addEventListener('submit', async e => {
   e.preventDefault();
-  formNote.textContent = "Thanks — this is a design preview, so nothing was sent. Connect a form service to make this live.";
+
+  const required = $$('[required]', contactForm);
+  const missing = required.some(f => !f.value.trim());
+  if (missing) {
+    formNote.textContent = "Please fill in your name and email before sending.";
+    formNote.classList.add('error');
+    return;
+  }
+
+  const originalBtnText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending…";
+  formNote.classList.remove('error');
+  formNote.textContent = "Sending your project brief…";
+
+  const data = new FormData(contactForm);
+  data.append('_subject', `New project enquiry from ${data.get('name')}`);
+  data.append('_template', 'table');
+  data.append('_captcha', 'false');
+
+  try {
+    const res = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    });
+    if (!res.ok) throw new Error('Request failed');
+
+    formNote.textContent = "Thanks — your project brief is on its way. We'll reply within one business day.";
+    contactForm.reset();
+  } catch (err) {
+    formNote.classList.add('error');
+    formNote.textContent = `Something went wrong sending that. Please email us directly at ${CONTACT_EMAIL}.`;
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalBtnText;
+  }
 });
